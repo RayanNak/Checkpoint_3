@@ -1,20 +1,110 @@
 *{
-    transition: 2s;
+    transition: 0.5s;
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
-    background-color: gray;
+    height: 695px;
+    background-image: linear-gradient(45deg, violet, blueviolet);
+    /* background-repeat: no-repeat; */
+}
+
+/* #history, .theme, #calculator{
+    display: inline-block;
+} */
+
+#allinall{
+    display: flex;
+}
+
+#history{
+    width: 300px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto 20px;
+    opacity: 0;
+}
+
+h1, h2, h3, #historyParagraph{
+    color: white;
+    text-align: center;
+    margin: 12px;
+}
+
+.theme *{
+    margin: 10px auto;
+}
+
+input{
+    position: relative;
+    left: 80px;
+    outline: none;
+}
+
+.color{
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+    outline-width: 0;
+    outline-color: white;
+    outline-style: solid;
+
+}
+
+.red{
+    background-color: red;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.blueviolet{
+    background-color: blueviolet;
+}
+
+.darkgreen{
+    background-color: darkgreen;
+}
+
+.lightgreen{
+    background-color: lightgreen;
+}
+
+.theme{
+    width: 300px;
+    height: 500px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 20px;
+    margin: auto 20px;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    width: 100px;
+    height: 120px;
 }
 
 #calculator{
     width: 300px;
-    height: 415px;
-    margin: 90px auto;
-    background-color: aqua;
-    border: 1px, aqua, solid;
+    height: 500px;
+    border-style: solid;
+    border-color:  white;
+    border-width: 1px;
     border-radius: 20px;
+    margin: auto 20px;
 }
 
 #calculator div:not(#screen){
@@ -41,7 +131,9 @@ body{
 }
 
 .buttons{
-    margin: 20px;
+    margin: 10px;
+    position: relative;
+    left: 15px;
 }
 
 #reset{
@@ -52,21 +144,41 @@ body{
 }
 
 button{
-    width: 50px;
-    height: 70px;
-    background-color: aquamarine;
-    color: blue;
+    background-image: linear-gradient(30deg,  violet, blueviolet);
+    color: white;
     font-weight: bold;
-    font-size: 50px;
-    border: 5px aquamarine solid;
-    border-radius: 25%;
-    margin: 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-style: white;
     outline: none;
     cursor: pointer;
     transition: 1.5s;
+    margin: 5px;
 }
 
-button:hover{
-    color: white;
-    background-color: black;
+#historyButton{
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.themeButton{
+    border-radius: 10px;
+    font-size: 20px;
+    position: relative;
+    left: 80px;
+}
+
+.calculatorButton{
+    border-radius: 25%;
+    width: 50px;
+    height: 70px;
+    font-size: 50px;
+}
+
+.buttons #reset{
+    position: relative;
+    font-size: 20px;
+    text-align: center;
 }

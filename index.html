@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,105 @@
     <title>Checkpoint 3</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div id="calculator">
-        <div id="screen">
-            <p id="screenNum"></p>
+    <button onclick="getHistory()" id="historyButton">History</button>
+    <br>
+    <div id="allinall">
+        <div id="history">
+            <p id="historyParagraph"></p>
         </div>
-        <div class="buttons">
-            <div>
-                <div><button onclick="check(this.id)" id="9">9</button></div>
-                <div><button onclick="check(this.id)" id="8">8</button></div>
-                <div><button onclick="check(this.id)" id="7">7</button></div>
-                <div><button onclick="check(this.id)" id="minus">-</button></div>
+        <div class="theme" id="global">
+            <h2>Global Theme</h2>
+            <h3>Number</h3>
+            <input id="GlobalInput" type="number" value="0">
+            <h3>1st Color</h3>
+            <div class="container">
+                <div onclick="chosen(this.id, '1')" class="color red" id="red1"></div>
+                <div onclick="chosen(this.id, '1')" class="color orange" id="orange1"></div>
+
+                <div onclick="chosen(this.id, '1')" class="color blue" id="blue1"></div>
+                <div onclick="chosen(this.id, '1')" class="color blueviolet" id="blueviolet1"></div>
+
+                <div onclick="chosen(this.id, '1')" class="color darkgreen" id="darkgreen1"></div>
+                <div onclick="chosen(this.id, '1')" class="color lightgreen" id="lightgreen1"></div>
             </div>
-            <div>    
-                <div><button onclick="check(this.id)" id="6">6</button></div>
-                <div><button onclick="check(this.id)" id="5">5</button></div>
-                <div><button onclick="check(this.id)" id="4">4</button></div>
-                <div><button onclick="check(this.id)" id="plus">+</button></div>
+            <h3>2nd Color</h3>
+            <div class="container">
+                <div onclick="chosen(this.id, '2')" class="color red" id="red2"></div>
+                <div onclick="chosen(this.id, '2')" class="color orange" id="orange2"></div>
+
+                <div onclick="chosen(this.id, '2')" class="color blue" id="blue2"></div>
+                <div onclick="chosen(this.id, '2')" class="color blueviolet" id="blueviolet2"></div>
+
+                <div onclick="chosen(this.id, '2')" class="color darkgreen" id="darkgreen2"></div>
+                <div onclick="chosen(this.id, '2')" class="color lightgreen" id="lightgreen2"></div>
             </div>
-            <div>
-                <div><button onclick="check(this.id)" id="3">3</button></div>
-                <div><button onclick="check(this.id)" id="2">2</button></div>
-                <div><button onclick="check(this.id)" id="1">1</button></div>
-                <div><button onclick="check(this.id)" id="times">*</button></div>
+            <button onclick="ChangeGlobalColor()" class="themeButton">Change Color</button>
+        </div>
+        <div id="calculator">
+            <h1>calculator</h1>
+            <div id="screen">
+                <p id="screenNum"></p>
             </div>
-            <div>
-                <div><button onclick="check(this.id)" id="0">0</button></div>
-                <div><button onclick="check(this.id)" id="reset">res</button></div>
-                <div><button onclick="calculate()" id="equal">=</button></div>
-                <div><button onclick="check(this.id)" id="over">/</button></div>
+            <div class="buttons">
+                <div>
+                    <div><button onclick="check(this.id)" id="9" class="calculatorButton">9</button></div>
+                    <div><button onclick="check(this.id)" id="8" class="calculatorButton">8</button></div>
+                    <div><button onclick="check(this.id)" id="7" class="calculatorButton">7</button></div>
+                    <div><button onclick="check(this.id)" id="minus" class="calculatorButton">-</button></div>
+                </div>
+                <div>
+                    <div><button onclick="check(this.id)" id="6" class="calculatorButton">6</button></div>
+                    <div><button onclick="check(this.id)" id="5" class="calculatorButton">5</button></div>
+                    <div><button onclick="check(this.id)" id="4" class="calculatorButton">4</button></div>
+                    <div><button onclick="check(this.id)" id="plus" class="calculatorButton">+</button></div>
+                </div>
+                <div>
+                    <div><button onclick="check(this.id)" id="3" class="calculatorButton">3</button></div>
+                    <div><button onclick="check(this.id)" id="2" class="calculatorButton">2</button></div>
+                    <div><button onclick="check(this.id)" id="1" class="calculatorButton">1</button></div>
+                    <div><button onclick="check(this.id)" id="times" class="calculatorButton">*</button></div>
+                </div>
+                <div>
+                    <div><button onclick="check(this.id)" id="0" class="calculatorButton">0</button></div>
+                    <div><button onclick="check(this.id)" id="reset" class="calculatorButton">res</button></div>
+                    <div><button onclick="calculate()" id="equal" class="calculatorButton">=</button></div>
+                    <div><button onclick="check(this.id)" id="over" class="calculatorButton">/</button></div>
+                </div>
             </div>
+        </div>
+        <div class="theme" id="digit">
+            <h2>Digit Theme</h2>
+            <h3>Number</h3>
+            <input id="DigitInput" type="number" value="0">
+            <h3>1st Color</h3>
+            <div class="container">
+                <div onclick="chosen(this.id, '3')" class="color red" id="red3"></div>
+                <div onclick="chosen(this.id, '3')" class="color orange" id="orange3"></div>
+
+                <div onclick="chosen(this.id, '3')" class="color blue" id="blue3"></div>
+                <div onclick="chosen(this.id, '3')" class="color blueviolet" id="blueviolet3"></div>
+
+                <div onclick="chosen(this.id, '3')" class="color darkgreen" id="darkgreen3"></div>
+                <div onclick="chosen(this.id, '3')" class="color lightgreen" id="lightgreen3"></div>
+            </div>
+            <h3>2nd Color</h3>
+            <div class="container">
+                <div onclick="chosen(this.id, '4')" class="color red" id="red4"></div>
+                <div onclick="chosen(this.id, '4')" class="color orange" id="orange4"></div>
+
+                <div onclick="chosen(this.id, '4')" class="color blue" id="blue4"></div>
+                <div onclick="chosen(this.id, '4')" class="color blueviolet" id="blueviolet4"></div>
+
+                <div onclick="chosen(this.id, '4')" class="color darkgreen" id="darkgreen4"></div>
+                <div onclick="chosen(this.id, '4')" class="color lightgreen" id="lightgreen4"></div>
+            </div>
+            <button onclick="ChangeDigitColor()" class="themeButton">Change Color</button>
         </div>
     </div>
+
 </body>
 <script src="./js/main.js"></script>
+
 </html>
