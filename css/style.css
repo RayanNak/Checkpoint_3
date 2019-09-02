@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 695px;
+    min-height: 100vh;
     background-image: linear-gradient(45deg, violet, blueviolet);
     /* background-repeat: no-repeat; */
 }
